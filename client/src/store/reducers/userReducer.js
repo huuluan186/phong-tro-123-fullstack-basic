@@ -3,7 +3,7 @@ const initState = {
 }
 
 const userReducer = (state=initState,actions)=>{
-    switch(actions.types){
+    switch(actions.type){
         default:
             return state;
     }
