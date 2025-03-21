@@ -7,10 +7,10 @@ function App() {
   return (
     <div className="h-screen w-screen bg-primary">
         <Routes>
-        <Route path={path.HOME} element={<Home />}>
-          {/* Login là route con của Home */}
-          <Route path={path.LOGIN} element={<Login />} />
-        </Route>
+            <Route path={path.HOME} element={<Home />}>
+            {/* Login là route con của Home */}
+                <Route path={path.LOGIN} element={<Login />} />
+            </Route>
         </Routes>
     </div>
   );
