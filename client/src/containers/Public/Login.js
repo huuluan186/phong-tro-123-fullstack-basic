@@ -14,7 +14,9 @@ const Login = () => {
 
     useEffect(() => {
         // Cập nhật giá trị của isRegister bằng flag từ location.state (nếu có)
-        setIsRegister(location.state?.flag);
+        if (location.state?.flag !== undefined) {
+            setIsRegister(location.state.flag);
+        }
     }, [location.state?.flag]); // Chạy lại khi location.state?.flag thay đổi
     
     const [payload,setPayLoad] = useState({
@@ -23,10 +25,15 @@ const Login = () => {
         name:''
     })
 
-    const handleSubmit = async ()=>{
-        console.log(payload)
-        dispatch(actions.register(payload))
-    }
+    const handleSubmit = async () => {
+        try {
+            console.log(payload);
+            await dispatch(actions.register(payload));
+        } catch (error) {
+            console.error("Đăng ký thất bại:", error);
+        }
+    };
+    
 
     return(
         <div className="w-full bg-white max-w-600 p-[30px] pb-[100px] rounded-md shadow-sm ">
