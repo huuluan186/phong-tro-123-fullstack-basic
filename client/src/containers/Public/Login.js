@@ -26,12 +26,8 @@ const Login = () => {
     })
 
     const handleSubmit = async () => {
-        try {
-            console.log(payload);
-            await dispatch(actions.register(payload));
-        } catch (error) {
-            console.error("Đăng ký thất bại:", error);
-        }
+        console.log(payload);
+        await isRegister ? dispatch(actions.register(payload)) : dispatch(actions.login(payload));
     };
     
 
