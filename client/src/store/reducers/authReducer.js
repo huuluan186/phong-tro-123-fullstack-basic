@@ -2,7 +2,9 @@ import actionTypes from "../actions/actionTypes";
 
 const initState = {
     isLoggedIn:false,
-    token:null
+    token:null,
+    msg:'',
+    update:false
 }
 
 const authReducer = (state=initState,actions)=>{
@@ -22,7 +24,8 @@ const authReducer = (state=initState,actions)=>{
                 ...state,
                 isLoggedIn: false,
                 msg: actions.data,
-                token:null
+                token:null,
+                update:!state.update
             }
 
         case actionTypes.LOGOUT:
