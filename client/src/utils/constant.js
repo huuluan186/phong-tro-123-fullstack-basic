@@ -7,3 +7,8 @@ export const path={
     CHO_THUE_PHONG_TRO: 'cho-thue-phong-tro',
 }
 
+export const text ={
+    HOME_TITLE: "Kênh thông tin Phòng trọ số 1 Việt Nam",
+    HOME_DESCRIPTION: "Có 70.990 tin đăng cho thuê"
+}
+

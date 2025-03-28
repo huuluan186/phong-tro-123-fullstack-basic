@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 import { apiGetCategories } from "../../services/category";
 import { toSlug } from "../../utils/Common/toSlug";
 
-const notActive = 'hover:bg-secondary2 py-2 px-4 bg-secondary1 h-full flex justify-center items-center'
-const active = 'hover:bg-secondary2 py-2 px-4 bg-secondary2 h-full flex justify-center items-center'
+const notActive = 'hover:text-red-500 py-2 px-4 bg-white h-full flex justify-center items-center border-b-2 border-transparent'
+const active = 'text-red-500 py-2 px-4 h-full flex justify-center items-center border-b-2 border-red-500'
 
 const Nav = ()=>{
 
@@ -21,8 +21,8 @@ const Nav = ()=>{
     },[])
 
     return(
-        <div className="w-screen flex justify-center items-center  text-white bg-secondary1 h-[40px]">
-            <div className="w-1100 flex h-full items-center text-sm font-medium">
+        <div className="w-screen flex justify-center items-center  text-white bg-white h-[40px]">
+            <div className="w-[60%] flex h-full items-center text-sm text-black mx-auto">
                 <NavLink to={'/'} className={({isActive})=> isActive ? active: notActive}>Trang Chủ</NavLink>
                 {categories?.length > 0 && categories.map((item) => {
                     return(

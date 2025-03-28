@@ -1,13 +1,15 @@
 import React from "react";
-import Header from "./Header";
+import {Header, Nav} from "./index";
 import { Outlet } from "react-router-dom";
-import Nav from "./Navigation";
 const Home = () => {
     return(
         <div className="w-full flex flex-col items-center m-auto h-full">
-            <Header/>
+             <div className="w-full bg-white flex flex-col items-center">
+                <Header/>
+            </div>
+           
             <Nav/>
-            <div className="w-1100 flex flex-col items-center justify-start mt-3 bg-primary">
+            <div className="w-[80%] flex flex-col items-start justify-start mt-3 bg-primary">
                 <Outlet/>
             </div>
         </div>
