@@ -12,3 +12,20 @@ export const text ={
     HOME_DESCRIPTION: "Có 70.990 tin đăng cho thuê"
 }
 
+export const location = [
+    {
+        id: 'hcm',
+        name: 'Phòng trọ Hồ Chí Minh',
+        image: 'https://phongtro123.com/images/location_hcm.jpg'
+    },
+    {
+        name: 'Phòng trọ Hà Nội',
+        image: 'https://phongtro123.com/images/location_hn.jpg',
+        id: 'hn',
+    },
+    {
+        name: 'Phòng trọ Đà nẵng',
+        image: 'https://phongtro123.com/images/location_dn.jpg',
+        id: 'dn',
+    },
+]

@@ -1,5 +1,5 @@
 import React from "react";
-import {Header, Nav} from "./index";
+import {Header, Nav, Search} from "./index";
 import { Outlet } from "react-router-dom";
 const Home = () => {
     return(
@@ -9,6 +9,8 @@ const Home = () => {
             </div>
            
             <Nav/>
+            <Search/>
+            
             <div className="w-[80%] flex flex-col items-start justify-start mt-3 bg-primary">
                 <Outlet/>
             </div>

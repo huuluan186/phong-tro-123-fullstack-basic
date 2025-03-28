@@ -31,7 +31,7 @@ export const insertService = () => new Promise(async (resolve, reject) => {
                 const overviewId = v4();
                 const imagesId = v4();
                 const userId = v4();
-                const labelCode = generateCode(4);
+                const labelCode = generateCode(item?.header?.class?.classType);
 
                 // 1. Tạo User trước
                 await db.User.create({
@@ -43,10 +43,15 @@ export const insertService = () => new Promise(async (resolve, reject) => {
                 }, { transaction });
 
                 // 2. Tạo Label
-                await db.Label.create({
-                    code: labelCode,
-                    value: item?.header?.class?.classType || 'Unknown'
-                }, { transaction });
+                await db.Label.findOrCreate({
+                    where: { code: labelCode },
+                    defaults: {
+                        code: labelCode,
+                        value: item?.header?.class?.classType || 'Unknown'
+                    },
+                    transaction // Đưa transaction vào cùng object này
+                });
+                
 
                 // 3. Tạo Attribute
                 await db.Attribute.create({
