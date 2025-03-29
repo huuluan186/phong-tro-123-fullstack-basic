@@ -1,10 +1,10 @@
-import { CiCirclePlus } from "react-icons/ci";
+import { CiCirclePlus,CiSearch } from "react-icons/ci";
 import { GrNext } from "react-icons/gr";
-import { IoLocationOutline } from "react-icons/io5";
+import { IoLocationOutline, IoHomeOutline } from "react-icons/io5";
 import { PiMoneyWavy } from "react-icons/pi";
 import { SlCrop } from "react-icons/sl";
-import { IoHomeOutline } from "react-icons/io5";
-import { CiSearch } from "react-icons/ci";
+import { FaStar,FaRegHeart,FaHeart  } from "react-icons/fa";
+import { BsBookmarkStarFill } from "react-icons/bs";
 
 const icons = {
     CiCirclePlus,
@@ -13,7 +13,11 @@ const icons = {
     PiMoneyWavy,
     SlCrop,
     IoHomeOutline,
-    CiSearch
+    CiSearch,
+    FaStar,
+    FaRegHeart,
+    FaHeart,
+    BsBookmarkStarFill
 }
 
 export default icons;
