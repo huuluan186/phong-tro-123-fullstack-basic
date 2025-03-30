@@ -21,7 +21,7 @@ const Nav = ()=>{
     },[])
 
     return(
-        <div className="w-screen flex justify-center items-center  text-white bg-white h-[40px]">
+        <div className="w-full flex justify-center items-center  text-white bg-white h-[40px]">
             <div className="w-[60%] flex h-full items-center text-sm text-black mx-auto">
                 <NavLink to={'/'} className={({isActive})=> isActive ? active: notActive}>Trang Chủ</NavLink>
                 {categories?.length > 0 && categories.map((item) => {

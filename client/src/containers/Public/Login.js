@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from "react";
 import {Button,InputForm} from '../../components'
 import { useLocation, useNavigate } from "react-router-dom";
-import { apiRegister } from "../../services/auth";
 import * as actions from '../../store/actions'
 import { useDispatch, useSelector} from "react-redux";
 import { toast } from "react-toastify";

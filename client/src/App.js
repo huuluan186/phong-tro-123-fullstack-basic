@@ -6,7 +6,7 @@ import { Home, Homepage, Login, RentalApartment, RentalGround, RentalHouse, Rent
 
 function App() {
   return (
-    <div className="h-full w-screen bg-primary">
+    <div className="bg-primary">
         <Routes>
             <Route path={path.HOME} element={<Home />}>
                 <Route index element={<Homepage />} />

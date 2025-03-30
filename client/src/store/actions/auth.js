@@ -1,6 +1,5 @@
 import actionTypes from './actionTypes'
 import { apiRegister, apiLogin} from '../../services/auth' 
-import { data } from 'react-router-dom'
 
 export const register = (payload) => async (dispatch) => {
     try {
