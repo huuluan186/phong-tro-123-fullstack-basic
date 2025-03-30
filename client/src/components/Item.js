@@ -1,4 +1,4 @@
-import React,{memo} from 'react'
+import React,{memo, useState} from 'react'
 import icons from '../utils/icon'
 const images = [
     "https://pt123.cdn.static123.com/images/thumbs/900x600/fit/2022/07/19/6310726d-d075-4e35-b1cb-cf5616bf5212_1658240491.jpg",
@@ -10,13 +10,21 @@ const images = [
 const {FaHeart,FaRegHeart,FaStar,BsBookmarkStarFill} = icons
 
 const Item = () => {
+
+    const [isHoverHeart,setIsHoverHeart] = useState(false)
+
   return (
     <div className='w-full flex gap-2 border-t border-orange-600 p-4'>
-        <div className='w-[40%] grid grid-cols-2 gap-[2px]'>
+        <div className='w-[40%] grid grid-cols-2 gap-[2px] cursor-pointer relative'>
             <img src={images[0]} alt='preview' className='w-[140px] h-[120px] object-cover'/>
             <img src={images[1]} alt='preview' className='w-[140px] h-[120px] object-cover'/>
             <img src={images[2]} alt='preview' className='w-[140px] h-[120px] object-cover'/>
             <img src={images[3]} alt='preview' className='w-[140px] h-[120px] object-cover'/>
+            <span className='text-white bg-overlay-70 px-2 rounded-md absolute bottom-1 left-1'>4 ảnh</span>
+            <span className='text-white px-2 rounded-md absolute bottom-1 right-3' onMouseEnter={()=>setIsHoverHeart(true)} onMouseLeave={()=>setIsHoverHeart(false)}>
+                {isHoverHeart ? <FaHeart size={26} color='red' />
+                : <FaRegHeart size={26} />}
+            </span>
         </div>
         <div className='w-[60%]'>
             <div className='flex justify-between gap-4'>
