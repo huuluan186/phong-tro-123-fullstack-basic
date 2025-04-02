@@ -31,6 +31,15 @@ fs
     db[model.name] = model;
   });
 
+// Đảm bảo đồng bộ hóa cơ sở dữ liệu với mô hình hiện tại
+sequelize.sync({ alter: true }) // Tự động điều chỉnh bảng trong cơ sở dữ liệu nếu có sự thay đổi
+  .then(() => {
+    console.log("Database synced successfully!");
+  })
+  .catch((err) => {
+    console.error("Error syncing database:", err);
+  });
+
 Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {
     db[modelName].associate(db);
