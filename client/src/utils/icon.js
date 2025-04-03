@@ -1,5 +1,5 @@
 import { CiCirclePlus,CiSearch } from "react-icons/ci";
-import { GrNext } from "react-icons/gr";
+import { GrNext,GrFormNextLink  } from "react-icons/gr";
 import { IoLocationOutline, IoHomeOutline } from "react-icons/io5";
 import { PiMoneyWavy } from "react-icons/pi";
 import { SlCrop } from "react-icons/sl";
@@ -9,6 +9,7 @@ import { BsBookmarkStarFill } from "react-icons/bs";
 const icons = {
     CiCirclePlus,
     GrNext,
+    GrFormNextLink,
     IoLocationOutline,
     PiMoneyWavy,
     SlCrop,

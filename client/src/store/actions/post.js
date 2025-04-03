@@ -42,7 +42,7 @@ export const getPostsLimit = (page) => async (dispatch) => {
         }
     } catch (error) {
         dispatch({
-            type: actionTypes.GET_POSTS,
+            type: actionTypes.GET_POSTS_LIMIT,
             posts: null
         })
     }

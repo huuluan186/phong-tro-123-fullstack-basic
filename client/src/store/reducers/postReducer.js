@@ -1,7 +1,8 @@
+import postcss from "postcss";
 import actionTypes from "../actions/actionTypes";
 
 const initState={
-    post:[],
+    posts:[],
     msg:'',
     count: 0
 }
