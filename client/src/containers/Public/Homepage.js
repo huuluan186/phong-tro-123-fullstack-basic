@@ -17,8 +17,8 @@ const Homepage = () => {
         <Province/>
        <div className='w-full flex gap-4'>
             <div className='w-[70%]'>
-                <List/>
-                <Pagination number={params.get('page')}/>
+                <List pageNumber={params.get('page')}/>
+                <Pagination pageNumber={params.get('page')}/>
                 <div className='h-[500px]'>
                 </div>
             </div>

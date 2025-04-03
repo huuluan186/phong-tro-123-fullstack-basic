@@ -5,7 +5,7 @@ import icons from '../../utils/icon' // Import icon
 
 const { GrFormNextLink,GrFormPreviousLink } = icons // Lấy icon điều hướng
 
-const Pagination = ({ number }) => {
+const Pagination = ({ pageNumber }) => {
     // Lấy dữ liệu số lượng bài viết và danh sách bài viết từ Redux store
     const { count, posts } = useSelector(state => state.post)
 
@@ -13,7 +13,7 @@ const Pagination = ({ number }) => {
     const [arrPage, setArrPage] = useState([])
 
     // State để lưu trang hiện tại, khởi tạo với `number`
-    const [currentPage, setCurrentPage] = useState(+number)
+    const [currentPage, setCurrentPage] = useState(+pageNumber)
 
     const [isHideNext, setIsHideNext] = useState(false) // Biến để kiểm tra xem có ẩn nút "tiếp theo" hay không
     const [isHidePrev, setIsHidePrev] = useState(false) // Biến để kiểm tra xem có ẩn nút "trước đó" hay không
